@@ -1,4 +1,4 @@
-# [Forged in Blocks]()
+# [Forged in Blocks](https://www.curseforge.com/minecraft/data-packs/forged-in-blocks)
 
 With this datapack — copper, iron, golden and diamond equipment is forged from blocks, not ingots.
 
