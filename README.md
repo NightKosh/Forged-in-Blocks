@@ -1,6 +1,6 @@
-# [Forged in Blocks]()
+# [Forged in Blocks](https://www.curseforge.com/minecraft/mc-mods/forged-in-blocks)  [![Curseforge](http://cf.way2muchnoise.eu/full_forged-in-blocks_downloads.svg)]() [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_forged-in-blocks_all.svg)]()
 
-With this datapack — copper, iron, golden and diamond equipment is forged from blocks, not ingots.
+With this mod — copper, iron, golden and diamond equipment is forged from blocks, not ingots.
 
 Forged in Blocks is a datapack that rethinks early-game progression in Minecraft, making equipment crafting more deliberate and meaningful.
 
@@ -21,7 +21,7 @@ Its goal is to restore weight and meaning to player decisions:
 
 * Good equipment should be forged, not assembled from a handful of ingots.
 
-The datapack fits perfectly into vanilla-plus modpacks, hardcore survival worlds, and any setup where resource management and thoughtful progression matter.
+The mod fits perfectly into vanilla-plus modpacks, hardcore survival worlds, and any setup where resource management and thoughtful progression matter.
 
 ## Compatibility
 
