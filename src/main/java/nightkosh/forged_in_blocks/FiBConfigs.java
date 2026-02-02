@@ -19,6 +19,7 @@ public class FiBConfigs {
     // anvil
     public static ModConfigSpec.ConfigValue<Boolean> ANVIL_CONSTANT_PRICE;
     public static ModConfigSpec.ConfigValue<Integer> ANVIL_REPAIR_PRICE;
+    public static ModConfigSpec.ConfigValue<Boolean> UNBREAKABLE_ANVIL;
 
     // other
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
@@ -32,6 +33,7 @@ public class FiBConfigs {
         // anvil
         ANVIL_CONSTANT_PRICE = BUILDER.define("Anvil repair price is constant", true);
         ANVIL_REPAIR_PRICE = BUILDER.define("Anvil repair price", 1);
+        UNBREAKABLE_ANVIL = BUILDER.define("Unbreakable Anvil", true);
 
         // other
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")

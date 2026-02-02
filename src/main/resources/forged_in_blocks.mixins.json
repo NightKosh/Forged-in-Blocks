@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "nightkosh.forged_in_blocks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "UnbreakableAnvilMixin"
+  ],
+  "client": [],
+  "server": []
+}
