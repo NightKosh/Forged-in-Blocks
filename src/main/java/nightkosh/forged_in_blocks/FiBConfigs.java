@@ -16,6 +16,10 @@ public class FiBConfigs {
     // mob cap
     public static ModConfigSpec.ConfigValue<Boolean> OVERRIDE_RECIPES;
 
+    // anvil
+    public static ModConfigSpec.ConfigValue<Boolean> ANVIL_CONSTANT_PRICE;
+    public static ModConfigSpec.ConfigValue<Integer> ANVIL_REPAIR_PRICE;
+
     // other
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
@@ -24,6 +28,10 @@ public class FiBConfigs {
 
         // recipes
         OVERRIDE_RECIPES = BUILDER.define("Override armors/weapons/tools crafting recipes", true);
+
+        // anvil
+        ANVIL_CONSTANT_PRICE = BUILDER.define("Anvil repair price is constant", true);
+        ANVIL_REPAIR_PRICE = BUILDER.define("Anvil repair price", 1);
 
         // other
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
