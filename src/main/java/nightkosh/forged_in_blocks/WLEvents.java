@@ -48,6 +48,7 @@ public class WLEvents {
         var material = event.getRight();
         if (!itemToRepair.isEmpty() && !material.isEmpty() &&
                 !itemToRepair.is(Items.ENCHANTED_BOOK) && !material.is(Items.ENCHANTED_BOOK) &&
+                itemToRepair.getItem().isDamaged(itemToRepair) &&
                 !itemToRepair.getItem().equals(material.getItem()) &&
                 itemToRepair.isValidRepairItem(material)) {
             if (FiBConfigs.ANVIL_CONSTANT_PRICE.get()) {
