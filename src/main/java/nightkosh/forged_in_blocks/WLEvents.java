@@ -20,7 +20,7 @@ import static nightkosh.forged_in_blocks.ForgedInBlocks.LOGGER;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @EventBusSubscriber(modid = ModInfo.ID)
-public class WLEventsConfigs {
+public class WLEvents {
 
     @SubscribeEvent
     public static void onAddPackFindersEvent(AddPackFindersEvent event) {
