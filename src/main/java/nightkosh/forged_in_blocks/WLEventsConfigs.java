@@ -24,10 +24,10 @@ public class WLEventsConfigs {
 
     @SubscribeEvent
     public static void onAddPackFindersEvent(AddPackFindersEvent event) {
-        if (FiBConfigs.DEBUG_MODE.get()) {
-            LOGGER.info("AddPackFindersEvent triggered");
-        }
         if (FiBConfigs.OVERRIDE_RECIPES.get()) {
+            if (FiBConfigs.DEBUG_MODE.get()) {
+                LOGGER.info("AddPackFindersEvent triggered. Going to override recipes");
+            }
             event.addPackFinders(
                     fromNamespaceAndPath(
                             ModInfo.ID,
@@ -44,17 +44,19 @@ public class WLEventsConfigs {
 
     @SubscribeEvent
     public static void onAnvilUpdateEvent(AnvilUpdateEvent event) {
-        if (FiBConfigs.DEBUG_MODE.get()) {
-            LOGGER.info("AnvilUpdateEvent triggered");
-        }
-        if (!event.getLeft().isEmpty() && !event.getRight().isEmpty() &&
-                !event.getLeft().is(Items.ENCHANTED_BOOK) && !event.getRight().is(Items.ENCHANTED_BOOK) &&
-                !event.getLeft().getItem().equals(event.getRight().getItem())) {
+        var itemToRepair = event.getLeft();
+        var material = event.getRight();
+        if (!itemToRepair.isEmpty() && !material.isEmpty() &&
+                !itemToRepair.is(Items.ENCHANTED_BOOK) && !material.is(Items.ENCHANTED_BOOK) &&
+                !itemToRepair.getItem().equals(material.getItem()) &&
+                itemToRepair.isValidRepairItem(material)) {
             if (FiBConfigs.ANVIL_CONSTANT_PRICE.get()) {
                 if (FiBConfigs.DEBUG_MODE.get()) {
-                    LOGGER.info("Going to change repair experience cost");
+                    LOGGER.info("AnvilUpdateEvent triggered. Going to change repair experience cost");
                 }
                 event.setXpCost(FiBConfigs.ANVIL_REPAIR_PRICE.get());
+                itemToRepair.setDamageValue(0);
+                event.setOutput(itemToRepair);
             }
         }
     }
