@@ -7,8 +7,10 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
+import net.neoforged.neoforge.event.AnvilUpdateEvent;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+import static nightkosh.forged_in_blocks.ForgedInBlocks.LOGGER;
 
 /**
  * Forged in Blocks
@@ -21,17 +23,22 @@ public class WLEventsConfigs {
 
     @SubscribeEvent
     public static void onAddPackFindersEvent(AddPackFindersEvent event) {
-        event.addPackFinders(
-                fromNamespaceAndPath(
-                        ModInfo.ID,
-                        "data/forged_in_blocks/datapacks/overrides"
-                ),
-                PackType.SERVER_DATA,
-                Component.literal("Forged in Blocks: Recipe Overrides"),
-                PackSource.BUILT_IN,      // если в твоей версии нет BUILT_IN — ставь DEFAULT
-                true,
-                Pack.Position.TOP
-        );
+        if (FiBConfigs.DEBUG_MODE.get()) {
+            LOGGER.info("AddPackFindersEvent triggered");
+        }
+        if (FiBConfigs.OVERRIDE_RECIPES.get()) {
+            event.addPackFinders(
+                    fromNamespaceAndPath(
+                            ModInfo.ID,
+                            "data/forged_in_blocks/datapacks/overrides"
+                    ),
+                    PackType.SERVER_DATA,
+                    Component.literal("Forged in Blocks: Recipe Overrides"),
+                    PackSource.BUILT_IN,
+                    true,
+                    Pack.Position.TOP
+            );
+        }
     }
 
 }
