@@ -57,6 +57,7 @@ public class WLEvents {
                 }
                 event.setXpCost(FiBConfigs.ANVIL_REPAIR_PRICE.get());
                 itemToRepair.setDamageValue(0);
+                event.setMaterialCost(1);
                 event.setOutput(itemToRepair);
             }
         }
