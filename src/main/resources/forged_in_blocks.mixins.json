@@ -3,7 +3,9 @@
   "package": "nightkosh.forged_in_blocks.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "UnbreakableAnvilMixin"
+    "UnbreakableAnvilMixin",
+    "NoExpLimitAnvilScreen",
+    "NoExpLimitAnvilMenu"
   ],
   "client": [],
   "server": []

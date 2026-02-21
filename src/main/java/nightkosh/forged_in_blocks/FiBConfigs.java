@@ -19,6 +19,8 @@ public class FiBConfigs {
     // anvil
     public static ModConfigSpec.ConfigValue<Boolean> ANVIL_CONSTANT_PRICE;
     public static ModConfigSpec.ConfigValue<Integer> ANVIL_REPAIR_PRICE;
+    public static ModConfigSpec.ConfigValue<Integer> ANVIL_REPAIR_MATERIAL_PRICE;
+    public static ModConfigSpec.ConfigValue<Boolean> ANVIL_NO_EXP_LIMIT;
     public static ModConfigSpec.ConfigValue<Boolean> UNBREAKABLE_ANVIL;
 
     // other
@@ -33,6 +35,8 @@ public class FiBConfigs {
         // anvil
         ANVIL_CONSTANT_PRICE = BUILDER.define("Anvil repair price is constant", true);
         ANVIL_REPAIR_PRICE = BUILDER.define("Anvil repair price", 1);
+        ANVIL_REPAIR_MATERIAL_PRICE = BUILDER.define("Anvil repair material price", 1);
+        ANVIL_NO_EXP_LIMIT = BUILDER.define("Remove experience limits", true);
         UNBREAKABLE_ANVIL = BUILDER.define("Unbreakable Anvil", true);
 
         // other

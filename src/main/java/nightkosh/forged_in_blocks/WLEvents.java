@@ -56,8 +56,8 @@ public class WLEvents {
                     LOGGER.info("AnvilUpdateEvent triggered. Going to change repair experience cost");
                 }
                 event.setXpCost(FiBConfigs.ANVIL_REPAIR_PRICE.get());
+                event.setMaterialCost(FiBConfigs.ANVIL_REPAIR_MATERIAL_PRICE.get());
                 itemToRepair.setDamageValue(0);
-                event.setMaterialCost(1);
                 event.setOutput(itemToRepair);
             }
         }
