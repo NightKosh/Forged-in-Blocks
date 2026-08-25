@@ -17,11 +17,11 @@ import static nightkosh.forged_in_blocks.ForgedInBlocks.LOGGER;
 @Mixin(AnvilMenu.class)
 public class NoExpLimitAnvilMenu {
 
-    @ModifyConstant(method = "createResultInternal", constant = @Constant(intValue = 40))
-    private int forged_in_blocks$createResultInternal(int originalConstant) {
+    @ModifyConstant(method = "createResult", constant = @Constant(intValue = 40))
+    private int forged_in_blocks$createResult(int originalConstant) {
         if (FiBConfigs.ANVIL_NO_EXP_LIMIT.get()) {
             if (FiBConfigs.DEBUG_MODE.get()) {
-                LOGGER.info("Anvil Menu createResultInternal method triggered. Going to remove experience limit");
+                LOGGER.info("Anvil Menu createResult method triggered. Going to remove experience limit");
             }
             return Integer.MAX_VALUE;
         } else {

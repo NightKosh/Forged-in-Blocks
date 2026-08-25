@@ -1,7 +1,6 @@
 {
   "pack": {
-    "min_format": [94,1],
-    "max_format": [94,1],
-    "description": "Forged in Blocks — equipment is forged from blocks, not ingots."
+    "description": "Forged in Blocks — equipment is forged from blocks, not ingots.",
+    "pack_format": 48
   }
 }
