@@ -27,7 +27,7 @@ public class FiBConfigs {
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
     static {
-        BUILDER.push("Configs for Withered Lands Mod");
+        BUILDER.push("Configs for Forged in Blocks Mod");
 
         // recipes
         OVERRIDE_RECIPES = BUILDER.define("Override armors/weapons/tools crafting recipes", true);
